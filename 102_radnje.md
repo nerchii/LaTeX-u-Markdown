@@ -14,13 +14,13 @@ provode putem posebnih riječi koje tvore osnovu programskog jezika,
 _operatora_ te putem _funkcija_ i _metoda_.
 
 Većina radnji ovisi o vrsti podataka. Koje radnje možemo obavljati s
-kojim podacima? Radnja `print`{.python} je univerzalna, bilo koju vrstu
+kojim podacima? Radnja `print` je univerzalna, bilo koju vrstu
 podataka možemo ispisati na ekran iako katkad taj ispis korisniku neće
 imati smisla. Programi su sami po sebi tekst, pa se sve može pretvoriti
 u tekst. Što je s ostalim radnjama? Jasno je da možemo zbrojiti dva
 broja, ali da li možemo zbrajati tekst? A tekst i broj? Probajte u
-IDLE-u izvršiti sljedeće izraze: `16 + 26`{.python},
-`'a' + 'b'`{.python} i `'z' + 42`{.python}. Da li su se svi izrazi
+IDLE-u izvršiti sljedeće izraze: `16 + 26`,
+`'a' + 'b'` i `'z' + 42`. Da li su se svi izrazi
 uspješno izvršili? Zašto?
 
 Važno je dakle uočiti da radnje koje možemo provesti s nekim podacima
@@ -62,54 +62,55 @@ else:
 broj je paran
 >>> x = round(3.14)
 ```
+U retku 1 vidimo jedan izraz, `17 + 25`. Ovaj izraz se sastoji
+od operatora `+` te dva cijela broja kao operanada,
+`17` i `25`. Ovaj izraz također tvori i jednu izjavu
 
-U retku 1 vidimo jedan izraz, `17 + 25`{.python}. Ovaj izraz se sastoji
-od operatora `+`{.python} te dva cijela broja kao operanada,
-`17`{.python} i `25`{.python}. Ovaj izraz također tvori i jednu izjavu
 koju u engleskom programskom žargonu nazivamo _expression statement_.
 Redak 2 je rezultat evaluacije ovog izraza.
 
 U retku 3 nalazi se jedna jednostavna izjava, ova izjava sadrži izraz
-`17 + 25`{.python} te dodjelu rezultata ovog izraza varijabli
-`n`{.python}. U ovoj izjavi prvo se evaluira izraz te se zatim rezultat
-izraza dodjeljuje varijabli `n`{.python}. Dakle, nakon evaluacije izraza
-s desne strane, izvršava se `n = 42`{.python}. Dodjela varijabli se ne
+`17 + 25` te dodjelu rezultata ovog izraza varijabli
+`n`. U ovoj izjavi prvo se evaluira izraz te se zatim rezultat
+izraza dodjeljuje varijabli `n`. Dakle, nakon evaluacije izraza
+s desne strane, izvršava se `n = 42`. Dodjela varijabli se ne
 smatra izrazom jer nema rezultat, to je jednostavno dodjela \"imena\"
 rezultatu izraza, odnosno pridruživanje rezultata izraza varijabli
-`n`{.python}.
+`n`.
 
 Pod jednostavne izjave smatramo one koje se logički pišu u jedan
 redak[^1]. Pored jednog ili više izraza, te izjave mogu sadržavati i
 posebne konstrukte poput pridruživanja vrijednosti varijabli te drugih
 izjava zadanih posebnim riječima koje propisuje Python. Ovih riječi nema
-puno, rijetko se mijenjaju i u Pythonu 3 uključuju: `assert`{.python},
-`pass`{.python}, `del`{.python}, `return`{.python}, `yield`{.python},
-`raise`{.python}, `break`{.python}, `continue`{.python},
-`import`{.python}, `global`{.python} i `nonlocal`{.python}. Obzirom da
+puno, rijetko se mijenjaju i u Pythonu 3 uključuju: `assert`,
+`pass`, `del`, `return`, `yield`,
+`raise`, `break`, `continue`,
+`import`, `global` i `nonlocal`. Obzirom da
 se radi o specijaliziranim \"naredbama\", s većinom ovih izjava ćemo se
 upoznavati kasnije u tekstu kada nam teme i znanje dozvole da ih
 kvalitetno obradimo.
 
-U retku 4 započinje složena izjava `if`{.python} koja završava u retku 7. Rezultat izvršavanja ove izjave možemo vidjeti u retku 10. Ovu izjavu
+U retku 4 započinje složena izjava `if` koja završava u retku 7. Rezultat izvršavanja ove izjave možemo vidjeti u retku 10. Ovu izjavu
+
 možemo pročitati na sljedeći način: ako je n paran broj, tada na ekran
 ispiši tekst \"broj je paran\", a ako nije, tada ne ekran ispiši tekst
 \"broj je neparan\". U retku 4, prvo se evaluira izraz
-`n \% 2`{.python}. Kao što je opisano u pregledu aritmetičkih operatora,
-operator `%`{.python} vraća ostatak cjelobrojnog dijeljenja. Nakon toga
+`n \% 2`. Kao što je opisano u pregledu aritmetičkih operatora,
+operator `%` vraća ostatak cjelobrojnog dijeljenja. Nakon toga
 se evaluira izraz koji provjerava da li je rezultat jednak nuli, odnosno
-u ovom slučaju `0 == 0`{.python}. Evaluacija tog izraza je vrijednost
-`True`{.python} što rezultira time da se izvršava redak 5, a ne redak 7.
+u ovom slučaju `0 == 0`. Evaluacija tog izraza je vrijednost
+`True` što rezultira time da se izvršava redak 5, a ne redak 7.
 Sve navedeno tvori jedan kondicional što je pobliže opisano u poglavlju
 [\[kondicionali\]](#kondicionali){reference-type="ref"
 reference="kondicionali"}.
 
 Složene izjave sadrže više komponenata i logički se pišu u više redaka.
-Tako, na primjer, izjava `if`{.python} sadrži i komponentu
-`else`{.python}. U Pythonu, složenih izjava ima još manje nego
-jednostavnih te one služe kontroli toka (`if`{.python},
-`while`{.python}, `for`{.python} i `try`{.python}), definiciji vlastitih
-funkcija i klasa (`def`{.python} i `class`{.python}) te radu s
-korutinama `async`{.python}. Kontrola toka se obrađuje u poglavlju
+Tako, na primjer, izjava `if` sadrži i komponentu
+`else`. U Pythonu, složenih izjava ima još manje nego
+jednostavnih te one služe kontroli toka (`if`,
+`while`, `for` i `try`), definiciji vlastitih
+funkcija i klasa (`def` i `class`) te radu s
+korutinama `async`. Kontrola toka se obrađuje u poglavlju
 [\[kontrola_toka\]](#kontrola_toka){reference-type="ref"
 reference="kontrola_toka"}, definicija funkcija i klasa u dijelu
 [\[abstrakcija\]](#abstrakcija){reference-type="ref"
@@ -122,10 +123,10 @@ koji se koriste komandnom linijom.
 U retku 11 primjera
 [\[listing:statements_expression\]](#listing:statements_expression){reference-type="ref"
 reference="listing:statements_expression"} vidimo izjavu koja se sastoji
-od poziva na funkciju `round`{.python} putem oblih zagrada unutar kojih
+od poziva na funkciju `round` putem oblih zagrada unutar kojih
 se nalaze parametri za tu funkciju. U ovom slučaju, funkcija prima jedan
-parametar, broj `3.14`{.python}. Poziv na tu funkciju čini jedan izraz,
-a rezultat se pridružuje varijabli `x`{.python}.
+parametar, broj `3.14`. Poziv na tu funkciju čini jedan izraz,
+a rezultat se pridružuje varijabli `x`.
 
 Sada kad razumijemo osnovne koncepte u zadavanju naredbi u programskim
 jezicima, odnosno izjave i izraze, pogledajmo pobliže detalje korištenja
@@ -135,11 +136,11 @@ putem programskih jezika.
 ## Operatori
 
 Operatori su najjednostavniji način provođenja radnji u programiranju, a
-mnogi su nam poznati iz matematike (npr. `+`{.python} i `-`{.python})
+mnogi su nam poznati iz matematike (npr. `+` i `-`)
 čak i ako nemamo iskustva s programiranjem. Operatora ima relativno mali
 broj i možemo ih svrstati u nekoliko skupina koje su opisane u nastavku.
 Oni su tipično neki simbol, ali mogu biti i više simbola (poput
-`!=`{.python}) ili pak riječi (poput `in`{.python} ili `and`{.python}).
+`!=`) ili pak riječi (poput `in` ili `and`).
 Uvijek su kratki za zapisati, ali ono što ih čini operatorima je stil
 njihova korištenja, a ne dužina u broju znakova. Također, operatora
 postoji relativno mali broj i svi mogući operatori su unaprijed određeni
@@ -147,17 +148,17 @@ samim propisom programskog jezika. Drugim riječima, nije moguće
 definirati vlastite operatore.
 
 Operatori se pišu između dvije vrijednosti ili varijable s kojima će se
-provoditi radnja kao, na primjer, u izrazu `x + y`{.python}. U tom
-izrazu znak `+`{.python} je operator, a varijable `x`{.python} i
-`y`{.python} su operandi, odnosno vrijednosti s kojima se izvršava
+provoditi radnja kao, na primjer, u izrazu `x + y`. U tom
+izrazu znak `+` je operator, a varijable `x` i
+`y` su operandi, odnosno vrijednosti s kojima se izvršava
 radnja naznačena operatorom.
 
 Operande najčešće odvajamo razmacima od operatora. Striktno govoreći,
 korištenje razmaka nije nužno u slučajevima kada je operator neki
-poseban simboli opcionalno (na primjer, `x * y`{.python} i
-`x*y`{.python} su ekvivalentni izrazi), ali kada je operator riječ, isto
+poseban simboli opcionalno (na primjer, `x * y` i
+`x*y` su ekvivalentni izrazi), ali kada je operator riječ, isto
 ne vrijedi jer se tada isti ne može razlikovati od imena varijable. Na
-primjer, `a and b`{.python} je validan izraz, ali `aandb`{.python} nije
+primjer, `a and b` je validan izraz, ali `aandb` nije
 već se referira na jednu varijablu koja se zove \"aandb\". Kao dobar
 stil pisanja kôda, dakle, preporuča se uvijek stavljati razmake prije i
 poslije operatora čak i kada sintaksa to ne zahtijeva.
@@ -171,13 +172,15 @@ referencu.
 ### Pridruživanje vrijednosti varijabli
 
 Daleko najčešći operator koji ćemo koristiti u kôdu je _operator za
-pridruživanje vrijednosti varijabli_. To je operator `=`{.python}. Važno
+
+pridruživanje vrijednosti varijabli_. To je operator `=`. Važno
+
 je zapamtiti da ovaj operator ne provjerava jednakost (tome služi
-operator `==`{.python}), već dodjeljuje vrijednosti nekoj varijabli. U
+operator `==`), već dodjeljuje vrijednosti nekoj varijabli. U
 Pythonu stoji i ideja da ovime dodjeljujemo imena različitim
 vrijednostima kako bi se na njih kasnije mogli referirati. To će često
 biti vrijednosti koje ne znamo za vrijeme pisanja programa kao što je to
-slučaj kada korisnika zatražimo unos funkcijom `input`{.python}.
+slučaj kada korisnika zatražimo unos funkcijom `input`.
 
 ```python
 Pridruživanje vrijednosti varijabli
@@ -198,8 +201,8 @@ Upiši neki tekst: neću >>> print(text) #varijabla text se sada referira na št
 
 Važno je primijetiti da su nam varijable nužne kako bi programirali.
 Egzaktne vrijednosti vrlo često nisu poznate za vrijeme pisanja
-programa. Na primjer, varijabla `text`{.python} se referira na rezultat
-izvršavanja funkcije `input`{.python}, odnosno na koji god tekst da je
+programa. Na primjer, varijabla `text` se referira na rezultat
+izvršavanja funkcije `input`, odnosno na koji god tekst da je
 korisnik upisao. Bez korištenja te varijable ne bismo imali načina da se
 pozovemo na korisnički unos koji može biti bilo što.
 
@@ -212,27 +215,20 @@ idućem poglavlju. Pregled je vidljiv u tablici
 [1](#tab:operatori-aritmetika){reference-type="ref"
 reference="tab:operatori-aritmetika"}.
 
-````center
-``` {#tab:operatori-aritmetika}
-  **operator**        **operacija**                     **primjer**   **rezultat**
-  ------------------- --------------------------------- ------------- --------------
-  $\boldsymbol{+}$    zbrajanje                         $7\:+\:2$     9
-  $\boldsymbol{-}$    oduzimanje                        $7\:-\:2$     5
-  $\boldsymbol{*}$    množenje                          $7\:*\:2$     14
-  $\boldsymbol{**}$   potenciranje                      $7\:**\:2$    49
-  $\boldsymbol{/}$    dijeljenje                        $7\:/\:2$     3.5
-  $\boldsymbol{//}$   cjelobrojno dijeljenje            $7\://\:2$    2
-  $\boldsymbol{\%}$   ostatak cjelobrojnog dijeljenja   $7\:\%\:2$    1
-
-  : Aritmetički operatori
-````
-
-````
+| Operator | Operacija                       | Primjer  | Rezultat |
+| -------- | ------------------------------- | -------- | -------- |
+| `+`      | Zbrajanje                       | `7 + 2`  | `9`      |
+| `−`      | Oduzimanje                      | `7 - 2`  | `5`      |
+| `*`      | Množenje                        | `7 * 2`  | `14`     |
+| `**`     | Potenciranje                    | `7 ** 2` | `49`     |
+| `/`      | Dijeljenje                      | `7 / 2`  | `3.5`    |
+| `//`     | Cjelobrojno dijeljenje          | `7 // 2` | `2`      |
+| `%`      | Ostatak cjelobrojnog dijeljenja | `7 % 2`  | `1`      |
 
 Zanimljivost kod aritmetičkih operatora je da se svi mogu spojiti s
-operatorom za pridruživanje vrijednosti varijabli (tj. `=`{.python})
-kako bi se skratilo pisanje izraza poput `x = x + 1`{.python} u
-`x += 1`{.python}. Drugim riječima, možemo u isto vrijeme odraditi
+operatorom za pridruživanje vrijednosti varijabli (tj. `=`)
+kako bi se skratilo pisanje izraza poput `x = x + 1` u
+`x += 1`. Drugim riječima, možemo u isto vrijeme odraditi
 aritmetičku operaciju i rezultat pridružiti varijabli. Ovo je najlakše
 objasniti primjerom
 [\[listing:dodjeljivanje_aritmetika\]](#listing:dodjeljivanje_aritmetika){reference-type="ref"
@@ -255,52 +251,39 @@ Skraćeno izvršavanje aritmetičkih operacija i pridruživanja
 
 Osim aritmetičkih operacija, vrijednosti često uspoređujemo. Sve
 vrijednosti možemo međusobno provjeriti da su jednake koristeći se
-operatorom `==`{.python} ili nejednake koristeći se operatorom
-`!=`{.python}. Kod vrijednosti koje podržavaju sortiranje možemo još i
+operatorom `==` ili nejednake koristeći se operatorom
+`!=`. Kod vrijednosti koje podržavaju sortiranje možemo još i
 provjeravati da li su veće ili manje od drugih vrijednosti. Operatore za
 usporedbu možemo vidjeti na tablici
 [2](#tab:operatori-usporedba){reference-type="ref"
 reference="tab:operatori-usporedba"}.
 
-````center
-``` {#tab:operatori-usporedba}
-  **operator**          **operacija**       **primjer**    **rezultat**
-  --------------------- ------------------- -------------- --------------
-  $\boldsymbol{==}$     jednako             $7\:==\:2$     False
-  $\boldsymbol{!\!=}$   nejednako           $7\:!\!=\:2$   True
-  $\boldsymbol{<}$      manje               $7\:<\:2$      True
-  $\boldsymbol{<\!=}$   manje ili jednako   $7\:<\!=\:2$   True
-  $\boldsymbol{>}$      veće                $7\:>\:2$      False
-  $\boldsymbol{>\!=}$   veće ili jednako    $7\:>\!=\:2$   False
-
-  : Operatori za usporedbu
-````
-
-````
+| Operator | Operacija         | Primjer  | Rezultat |
+| -------- | ----------------- | -------- | -------- |
+| `==`     | Jednako           | `7 == 2` | `False`  |
+| `!=`     | Nejednako         | `7 != 2` | `True`   |
+| `<`      | Manje             | `7 < 2`  | `False`  |
+| `<=`     | Manje ili jednako | `7 <= 2` | `False`  |
+| `>`      | Veće              | `7 > 2`  | `True`   |
+| `>=`     | Veće ili jednako  | `7 >= 2` | `True`   |
 
 ### Logički operatori
 
 Različite operacije je često potrebno i logički povezivati. Na primjer
 provjeravati da je više uvjeta zadovoljeno ili da je barem jedan od
-uvjeta zadovoljen. Tome služe logički operatori `and`{.python},
-`or`{.python} i `not`{.python} prikazani na tablici
+uvjeta zadovoljen. Tome služe logički operatori `and`,
+`or` i `not` prikazani na tablici
 [3](#tab:operatori-bool){reference-type="ref"
 reference="tab:operatori-bool"}. Ovi operatori zajedno s operatorima za
-usporedbu imaju posebno značajnu ulogu kod kondicionala, odnosno *if
-\... then \... else* konstrukcija.
 
-``` center
-``` {#tab:operatori-bool}
-  **operator**   **operacija**       **primjer**            **rezultat**
-  -------------- ------------------- ---------------------- --------------
-  **and**        logičko i           $7 > 2$ and $7 < 10$   True
-  **or**         logičko ili         $7 < 2$ or $7 < 10$    True
-  **not**        logička inverzija   not $7\:>\:2$          False
+usporedbu imaju posebno značajnu ulogu kod kondicionala, odnosno _if
+\... then \... else_ konstrukcija.
 
-  : Logički operatori
-````
-
-````
+| Operator | Operacija         | Primjer            | Rezultat |
+| -------- | ----------------- | ------------------ | -------- |
+| `and`    | Logičko "i"       | `7 > 2 and 7 < 10` | `True`   |
+| `or`     | Logičko "ili"     | `7 < 2 or 7 < 10`  | `True`   |
+| `not`    | Logička inverzija | `not (7 > 2)`      | `False`  |
 
 ### Operatori za provjeru članstva
 
@@ -312,17 +295,10 @@ tekstom. Operatori za provjeru članstva su prikazani na tablici
 [4](#tab:operatori-clanstvo){reference-type="ref"
 reference="tab:operatori-clanstvo"}.
 
-``` center
-``` {#tab:operatori-clanstvo}
-  **operator**   **operacija**   **primjer**            **rezultat**
-  -------------- --------------- ---------------------- --------------
-  **in**         sadrži          \"a\" in \"abc\"       True
-  **not in**     ne sadrži       \"a\" not in \"abc\"   False
-
-  : Operatori za provjeru članstva
-````
-
-````
+| Operator | Operacija | Primjer            | Rezultat |
+| -------- | --------- | ------------------ | -------- |
+| `in`     | Sadrži    | `"a" in "abc"`     | `True`   |
+| `not in` | Ne sadrži | `"a" not in "abc"` | `False`  |
 
 ### Operatori za provjeru identiteta
 
@@ -335,17 +311,10 @@ provjerava da li se dvije vrijednosti mogu smatrati ekvivalentnima
 odnosno "istima", a provjera identiteta provjerava da li se radi o istoj
 vrijednosti u memoriji računala.
 
-``` center
-``` {#tab:operatori-identitet}
-  **operator**   **operacija**         **primjer**     **rezultat**
-  -------------- --------------------- --------------- --------------
-  **is**         je isti objekt        True is 1       False
-  **is not**     ne nije isti objekt   True is not 1   True
-
-  : Operatori za provjeru identiteta
-````
-
-````
+| Operator | Operacija        | Primjer         | Rezultat |
+| -------- | ---------------- | --------------- | -------- |
+| `is`     | Je isti objekt   | `True is 1`     | `False`  |
+| `is not` | Nije isti objekt | `True is not 1` | `True`   |
 
 Ovo će početi imati više smisla kada dođemo do objektnog programiranja,
 ali za sada možemo upotrebu prikazati sljedećim primjerom:
@@ -362,7 +331,7 @@ False
 
 U ranijim primjerima prikazivali smo samo izraze koji se koriste jednim
 operatorom. Što se međutim zbiva kada u istom izrazu koristimo više
-operatora? Na primjer, koliko je `2 + 2 * 3`{.python}? Kako bismo
+operatora? Na primjer, koliko je `2 + 2 * 3`? Kako bismo
 izračunali taj izraz potreban nam je koncept prioriteta operatora.
 Pogledajmo primjer.
 
@@ -376,12 +345,12 @@ Provjera jednakosti i operator is
 
 Kao što znamo iz matematike, postoji zadani redoslijed izvršavanja
 operatora. Operacije prema prioritetu operatora. U prethodnom primjeru,
-operator `*`{.python} ima veći prioritet od operatora `+`{.python} pa je
-prva operacija koja se izvršava operacija `2 * 3`{.python}. Ukoliko
+operator `*` ima veći prioritet od operatora `+` pa je
+prva operacija koja se izvršava operacija `2 * 3`. Ukoliko
 želimo promijeniti taj redoslijed, moramo koristiti zagrade oko jedne
 operacije (dakle jednog operatora i njegovih operanada). Vrijedi
-zapamtiti da zagrade nisu nikad greška. Izraz `2 + 2 * 3`{.python} isti
-je kao i izraz `2 + (2 * 3)`{.python}. Drugim riječima, kada nismo
+zapamtiti da zagrade nisu nikad greška. Izraz `2 + 2 * 3` isti
+je kao i izraz `2 + (2 * 3)`. Drugim riječima, kada nismo
 sigurni u zadani prioritet operatora, uvijek možemo koristiti zagrade
 kako bi se osigurali u redoslijed izvršavanja operacija.
 
@@ -399,19 +368,19 @@ Operatori zapisani na vrhu popisa imaju najveći prioritet.
 
 2.  izvršavanje funkcija
 
-3.  potenciranje (`**`{.python})
+3.  potenciranje (`**`)
 
-4.  pretvaranje brojeva u negativne (`-x`{.python})
+4.  pretvaranje brojeva u negativne (`-x`)
 
 5.  množenje, dijeljenje, cjelobrojno dijeljenje, ostatak
-    (`*, /, //, %`{.python})
+    (`*, /, //, %`)
 
-6.  zbrajanje i oduzimanje (`+, -`{.python})
+6.  zbrajanje i oduzimanje (`+, -`)
 
 7.  provjera članstva, provjera identiteta i
-    usporedbe(`in, not in, is, is not, <, <=, >, >=, !=, ==`{.python})
+    usporedbe(`in, not in, is, is not, <, <=, >, >=, !=, ==`)
 
-8.  booleovi operatori (`not, and, or`{.python})
+8.  booleovi operatori (`not, and, or`)
 
 Situacija je zapravo nešto kompleksnija, ali ovdje se navode samo
 koncepti s kojima smo već upoznati. Potpunu tablicu koja definira
@@ -428,8 +397,8 @@ Operatora, dakle, ima relativno mali broj i obavljaju neke osnovne
 radnje. Drugi način provođenja radnji u programiranju je funkcijama.
 Funkcija ima vrlo velik broj i obavljaju najrazličitije radnje koje su
 najčešće znantno kompleksnije od onih koje obavljaju operatori. Već smo
-vidjeli funkciju koja ispisuje tekst na ekran (`print`{.python}) i koja
-pita korisnika za unos (`input`{.python}). Postoje i mnoge druge
+vidjeli funkciju koja ispisuje tekst na ekran (`print`) i koja
+pita korisnika za unos (`input`). Postoje i mnoge druge
 funkcije, za sortiranje, zbrajanje svih brojeva u nekom popisu, pristup
 tekstualnim datotekama, kopiranje i brisanje datoteka, slanje
 elektroničke pošte i tako dalje. Python s verzijom 3.8 ima 69 ugrađenih
@@ -463,7 +432,7 @@ Svaka funkcija:
 2.  Provodi neke radnje (na temelju ulaznih vrijednosti ako postoje).
 
 3.  Vraća neku vrijednost. Ako rezultat nije relevantan vraća vrijednost
-    `None`{.python}[^3]
+    `None`[^3]
 
 Što je dakle funkcija u programskim jezicima? Ulazne vrijednosti za
 funkciju zovemo _parametri_ ili _argumenti_. Python interno koristi
@@ -475,9 +444,9 @@ određene radnje (npr. zbrajaju se ulazni parametri ili se ispisuju na
 ekran) i na kraju funkcija vraća neku vrijednost. Funkcija koja zbraja
 ulazne parametre vraća njihov zbroj kao rezultat. Kod te funkcije, kao i
 kod većine, rezultat je relevantan i uopće razlog izvršavanja funkcije.
-Kod funkcije `print`{.python}, funkcija ispisuje na ekran, a vraća
-vrijednost `None`{.python}. Funkcije čija povratna vrijednost nije
-relevantna vraćaju vrijednost `None`{.python}. U svakom slučaju,
+Kod funkcije `print`, funkcija ispisuje na ekran, a vraća
+vrijednost `None`. Funkcije čija povratna vrijednost nije
+relevantna vraćaju vrijednost `None`. U svakom slučaju,
 funkcije u Pythonu uvijek imaju povratnu vrijednost.
 
 Parametri se pišu u oble zagrade koje kod funkcija i metoda imaju
@@ -493,17 +462,16 @@ reference="listing:funkcija_izvrsavanje"}.
 
 Kao što vidimo u zadnjem slučaju, kada pokušamo oblim zagradama izvršiti
 nešto što nije funkcija dobivamo grešku
-`TypeError: 'int' object is not callable`{.python}. U slobodnom
+`TypeError: 'int' object is not callable`. U slobodnom
 prijevodu, greška u vrsti podataka: objekt vrste cijeli broj se ne može
 pozvati, odnosno nije izvršiv. Navedena greška demonstrira upotrebu
 ranije opisane terminologije.
 
-```important
-Izvršavanje funkcija Funkcije se pozivaju oblim zagradama. Oble zagrade
-nakon riječi naznačuju da se neki kôd poziva. Na primjer,
-`print`{.python} se jednostavno referira na tu funkciju i ne izvršava
-je. `print()`{.python} izvršava tu funkciju.
-```
+> **Important**
+> Izvršavanje funkcija Funkcije se pozivaju oblim zagradama. Oble zagrade
+> nakon riječi naznačuju da se neki kôd poziva. Na primjer,
+> `print` se jednostavno referira na tu funkciju i ne izvršava
+> je. `print()` izvršava tu funkciju.
 
 ### Pozivanje i parametri
 
@@ -512,7 +480,7 @@ Ponekad primaju i nula parametara, ali to je rjeđi i najjednostavniji
 slučaj. Kako se parametri šalju funkcijama kad ih je više od jedan?
 Postoje dva načina: pozicijski ili po imenu. Do sad smo koristili samo
 pozicijski pristup i slali samo jedan parametar. Pogledajmo funkciju
-`round`{.python} koja zaokružuje broj na cijeli ili na određen broj
+`round` koja zaokružuje broj na cijeli ili na određen broj
 decimala kao primjer funkcije s dva parametra.
 
 ```python
@@ -524,7 +492,7 @@ Obvezni i opcionalni parametri
 3.14
 ```
 
-Funkcija `round`{.python}, dakle, uzima jedan obvezan i jedan opcionalan
+Funkcija `round`, dakle, uzima jedan obvezan i jedan opcionalan
 parametar. U primjeru
 [\[listing:parametri_obveznost\]](#listing:parametri_obveznost){reference-type="ref"
 reference="listing:parametri*obveznost"} smo parametre definirali
@@ -532,11 +500,12 @@ pozicijski. Prvi parametar je broj koji se zaokružuje, a drugi broj
 decimala na koji će se zakruživati. Različite funkcije imaju posve
 različite parametre i njihov broj ovisi o tome što funkcija radi. Kako
 saznati parametre neke funkcije? Možemo čitati \_online* dokumentaciju
-ili pak iskoristiti ugrađenu funkciju `help`{.python}.
+
+ili pak iskoristiti ugrađenu funkciju `help`.
 
 ### Interna dokumentacija i funkcija help
 
-Ukoliko u Pythonu potražimo pomoć za funkciju `round`{.python} dobit
+Ukoliko u Pythonu potražimo pomoć za funkciju `round` dobit
 ćemo sljedeći ispis:
 
 ```python
@@ -550,19 +519,19 @@ round(number, ndigits=None)
   The return value is an integer if ndigits is omitted or None. Otherwise the return value has the same type as the number. ndigits may be negative. """
 ```
 
-Primijetite razliku između `help(round)`{.python} i
-`help(round())`{.python}. U prvom slučaju ne izvršavamo funkciju
-`round`{.python} već se na nju referiramo pa ju funkcija `help`{.python}
+Primijetite razliku između `help(round)` i
+`help(round())`. U prvom slučaju ne izvršavamo funkciju
+`round` već se na nju referiramo pa ju funkcija `help`
 prima kao parametar. U drugom slučaju izvršavamo funkciju
-`round`{.python} pa će funkcija `help`{.python} primiti rezultat
+`round` pa će funkcija `help` primiti rezultat
 izvršavanja te funkcije kao parametar, što nije ono što želimo postići.
 
 Redak teksta koji nam opisuje koje parametre prima ova funkcija je
-`round(number, ndigits=None)`{.python}. Nju valja čitati ovako:
+`round(number, ndigits=None)`. Nju valja čitati ovako:
 \"Funkcija round prima jedan obavezan parametar koji se zove
-`number`{.python} te jedan opcionalan parametar `ndigits`{.python}\".
-Parametar `ndigits`{.python} je opcionalan zato jer mu je već pridružena
-vrijednost `None`{.python}. Svi parametri kojima je već pridružena neka
+`number` te jedan opcionalan parametar `ndigits`\".
+Parametar `ndigits` je opcionalan zato jer mu je već pridružena
+vrijednost `None`. Svi parametri kojima je već pridružena neka
 vrijednost su opcionalni i moramo ih definirati samo ukoliko želimo
 promijeniti unaprijed zadanu vrijednost.
 
@@ -590,7 +559,7 @@ imenovanih parametara često i poboljšava čitljivost kôda, pogotovo kod
 funkcija koje primaju velik broj ulaznih vrijednosti. Postoje i funkcije
 koje primaju varijabilan broj parametara i kod kojih moramo koristiti
 imenovane parametre kako bi postigli određenu funkcionalnost. Kao
-kompleksniji primjer možemo prikazati naredbu `print`{.python} koju smo
+kompleksniji primjer možemo prikazati naredbu `print` koju smo
 do sada koristili samo u najosnovnijem obliku.
 
 ```python
@@ -603,10 +572,10 @@ print(...) print(value, ..., sep=' ', end='' file=sys.stdout, flush=False)
   Prints the values to a stream, or to sys.stdout by default. Optional keyword arguments: file: a file-like object (stream); defaults to the current sys.stdout. sep: string inserted between values, default a space. end: string appended after the last value, default a newline. flush: whether to forcibly flush the stream.
 ```
 
-Usredotočimo se za sada samo na parametre funkcije `print`{.python}.
-Vidimo novi koncept. Prvi parametar se zove `value`{.python}, a nakon
-njega dolazi `...`{.python}. To znači da možemo poslati bilo koji broj
-vrijednosti kao parametre za `value`{.python}. Sve ove vrijednosti će se
+Usredotočimo se za sada samo na parametre funkcije `print`.
+Vidimo novi koncept. Prvi parametar se zove `value`, a nakon
+njega dolazi `...`. To znači da možemo poslati bilo koji broj
+vrijednosti kao parametre za `value`. Sve ove vrijednosti će se
 ispisati na ekran razdvojene razmakom, osim ako nismo naredili
 drugačije. Pogledajmo primjer:
 
@@ -617,15 +586,15 @@ Funkcija print s više parametara
 a b c
 ```
 
-Funkcija `print`{.python} je u liniji 1 primila tri vrijednosti koje će
-ispisati, `'a', 'b'`{.python} i `'c'`{.python}. Sve tri vrijednosti su
+Funkcija `print` je u liniji 1 primila tri vrijednosti koje će
+ispisati, `'a', 'b'` i `'c'`. Sve tri vrijednosti su
 ispisane razdvojene razmakom, a na kraju je ispisan znak za prelazak u
 novi redak. Ove mogućnosti možemo kontrolirati parametrom
-`sep`{.python}, koji definira znak koji razdvaja vrijednosti, i
-parametrom `end`{.python} koji definira znak koji s kojim se završava
+`sep`, koji definira znak koji razdvaja vrijednosti, i
+parametrom `end` koji definira znak koji s kojim se završava
 ispis. Obzirom da se sve vrijednosti koje pošaljemo pozicijski ispisuju
-razdvojene znakovima koje definira `sep`{.python} i završavaju znakovima
-koje definira `end`{.python}, kako poslati te parametre? Koristeći se
+razdvojene znakovima koje definira `sep` i završavaju znakovima
+koje definira `end`, kako poslati te parametre? Koristeći se
 imenima. Pogledajmo primjer.
 
 ```python
@@ -638,43 +607,45 @@ b
 c
 ```
 
-U prikazanom primjeru, `'\n'`{.python} se referira na znak za novi
+U prikazanom primjeru, `'\n'` se referira na znak za novi
 redak, što je pobliže opisano u poglavlju o tekstu. Redak 1 prikazuje
 naredbu koja ispisuje tri vrijednosti i spaja ih sa znakovima razmak,
 crtica, razmak, a završava ispis sa znakovima razmak, tri točkice i
 novim retkom. Redak 3 prikazuje naredbu koja koristi znak za novi redak
-kao `sep`{.python} pa se svaka vrijednost ispisuje u novom retku.
+kao `sep` pa se svaka vrijednost ispisuje u novom retku.
 
 ### Metode
 
 _Metode_ su posebna vrsta funkcija. To su funkcije vezane za vrste
 vrijednosti i uvijek rade nešto s vrijednošću za koju su vezane.
-Pogledajmo razliku između funkcije `print`{.python}, i metode
-`upper`{.python} koju posjeduju vrijednosti vrste tekst, odnosno u
-Python terminima `str`{.python}, i koja pretvara sva mala slova u
+Pogledajmo razliku između funkcije `print`, i metode
+`upper` koju posjeduju vrijednosti vrste tekst, odnosno u
+Python terminima `str`, i koja pretvara sva mala slova u
 velika.
 
 U načelu, ugrađene funkcije implementiraju radnje koje se mogu provoditi
-s više vrsta vrijednosti. Na primjer `print(t)`{.python} ispisuje
-tekstualni prikaz varijable `t`{.python} bez obzira na vrstu vrijednosti
+s više vrsta vrijednosti. Na primjer `print(t)` ispisuje
+tekstualni prikaz varijable `t` bez obzira na vrstu vrijednosti
 koja je toj varijabli pridružena. Hipotetska funkcija
-`upper(t)`{.python} bi dozvoljavala varijabli `t`{.python} da bude samo
+`upper(t)` bi dozvoljavala varijabli `t` da bude samo
 tekst pa ju je logičnije vezati uz samu vrijednost:
-`t.upper()`{.python}. `t.upper(t)`{.python} bi bilo u ovom slučaju
+`t.upper()`. `t.upper(t)` bi bilo u ovom slučaju
 redundantno pisati pa se pretpostavlja da metoda prima vrijednost prije
-točke kao prvi parametar. Na taj način je funkcija `upper`{.python}
+točke kao prvi parametar. Na taj način je funkcija `upper`
 dostupna samo kroz tekstualne vrijednosti što pogoduje organizaciji kôda
 jer ju smješta u jedini kontekst u kojem je iskoristiva. Poziv
-`x.upper()`{.python} javlja grešku
-`AttributeError: 'int' object has no attribute 'upper'`{.python} jer
-objekti vrste `int`{.python} nemaju \"mogućnost\" odnosno metodu
-`upper`{.python}: to kod brojeva jednostavno nema smisla jer se veže uz
+`x.upper()` javlja grešku
+`AttributeError: 'int' object has no attribute 'upper'` jer
+objekti vrste `int` nemaju \"mogućnost\" odnosno metodu
+`upper`: to kod brojeva jednostavno nema smisla jer se veže uz
 koncept promjene veličine slova.
 
-```important
-Metode Metode su funkcije koje su vezane uz određenu vrstu vrijednosti i
-implicitno primaju tu vrijednost kao prvi parametar.
-```
+> **Important**
+> Metode Metode su funkcije koje su vezane uz određenu vrstu vrijednosti i
+> implicitno primaju tu vrijednost kao prvi parametar.
+
+> **Important**
+> Metode su funkcije koje su vezane uz određenu vrstu vrijednosti i implicitno primaju tu vrijednost kao prvi parametar.
 
 [^1]:
     Termin \"logički pišu\" se koristi zato jer je jedan redak moguće
