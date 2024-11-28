@@ -49,7 +49,7 @@ da se izrazi _evaluiraju_ čime se izračunava vrijednost izraza. Izrazi
 se u načelu sastoje od operatora i operanada, ali sadrže i druge
 koncepte kao sastavne dijelove što je to funkcija. Pogledajmo primjere:
 
-```python
+```
 Izjave i izrazi
 >>>17 + 25
 42
@@ -62,6 +62,7 @@ else:
 broj je paran
 >>> x = round(3.14)
 ```
+
 U retku 1 vidimo jedan izraz, `17 + 25`. Ovaj izraz se sastoji
 od operatora `+` te dva cijela broja kao operanada,
 `17` i `25`. Ovaj izraz također tvori i jednu izjavu
@@ -171,9 +172,9 @@ referencu.
 
 ### Pridruživanje vrijednosti varijabli
 
-Daleko najčešći operator koji ćemo koristiti u kôdu je _operator za
+Daleko najčešći operator koji ćemo koristiti u kôdu je \_operator za
 
-pridruživanje vrijednosti varijabli_. To je operator `=`. Važno
+pridruživanje vrijednosti varijabli\_. To je operator `=`. Važno
 
 je zapamtiti da ovaj operator ne provjerava jednakost (tome služi
 operator `==`), već dodjeljuje vrijednosti nekoj varijabli. U
@@ -182,7 +183,7 @@ vrijednostima kako bi se na njih kasnije mogli referirati. To će često
 biti vrijednosti koje ne znamo za vrijeme pisanja programa kao što je to
 slučaj kada korisnika zatražimo unos funkcijom `input`.
 
-```python
+```
 Pridruživanje vrijednosti varijabli
 
 >>> x = 16 # pridruži vrijednost 16 novoj varijabli x
@@ -234,7 +235,7 @@ objasniti primjerom
 [\[listing:dodjeljivanje_aritmetika\]](#listing:dodjeljivanje_aritmetika){reference-type="ref"
 reference="listing:dodjeljivanje_aritmetika"}.
 
-``` python
+```
 Skraćeno izvršavanje aritmetičkih operacija i pridruživanja
 
 >>> x = 1
@@ -245,7 +246,7 @@ Skraćeno izvršavanje aritmetičkih operacija i pridruživanja
 >>> print(x) 5 >>> x *= 2 # isto što i x = x \* 2 samo kraće za pisati
 >>> print(x) 10 >>> x /= 2 # isto što i x = x / 2 >>> print(x)
 5.0
-````
+```
 
 ### Operatori za usporedbu
 
@@ -319,13 +320,13 @@ vrijednosti u memoriji računala.
 Ovo će početi imati više smisla kada dođemo do objektnog programiranja,
 ali za sada možemo upotrebu prikazati sljedećim primjerom:
 
-``` python
+```
 Provjera jednakosti i operator is
 >>> True == 1 #True se može smatrati jednakom vrijednosti 1
 True
 >>> True is 1 #True nije posve ista vrijednost u memoriji kao i 1
 False
-````
+```
 
 ### Prioritet izvršavanja operacija
 
@@ -335,7 +336,7 @@ operatora? Na primjer, koliko je `2 + 2 * 3`? Kako bismo
 izračunali taj izraz potreban nam je koncept prioriteta operatora.
 Pogledajmo primjer.
 
-```python
+```
 Provjera jednakosti i operator is
 >>> 2 + 2 * 3 # prvo se množi a onda zbraja
 8
@@ -483,7 +484,7 @@ pozicijski pristup i slali samo jedan parametar. Pogledajmo funkciju
 `round` koja zaokružuje broj na cijeli ili na određen broj
 decimala kao primjer funkcije s dva parametra.
 
-```python
+```
 Obvezni i opcionalni parametri
 >>> pi = 3.1416
 >>> round(pi) # obavezan parametar, što se zaokružuje, bez toga radnja nema smisla
@@ -508,7 +509,7 @@ ili pak iskoristiti ugrađenu funkciju `help`.
 Ukoliko u Pythonu potražimo pomoć za funkciju `round` dobit
 ćemo sljedeći ispis:
 
-```python
+```
 Pomoć za funkciju round
 >>> help(round)
  """Help on built-in function round in module builtins:
@@ -541,7 +542,7 @@ svaki parametar uz poziciju ima i svoje ime. Ta imena možemo koristiti
 prilikom pozivanja funkcije kako bi parametre definirali putem imena, a
 ne pozicije. Pogledajmo primjer:
 
-```python
+```
 Pozicijski i imenovani parametri
 >>> n = 3.142
 >>> round(number=n) # bilo koji parametar možemo i imenovati
@@ -562,7 +563,7 @@ imenovane parametre kako bi postigli određenu funkcionalnost. Kao
 kompleksniji primjer možemo prikazati naredbu `print` koju smo
 do sada koristili samo u najosnovnijem obliku.
 
-```python
+```
 Pomoć za funkciju print
 >>> help(print)
 Help on built-in function print in module builtins:
@@ -579,7 +580,7 @@ vrijednosti kao parametre za `value`. Sve ove vrijednosti će se
 ispisati na ekran razdvojene razmakom, osim ako nismo naredili
 drugačije. Pogledajmo primjer:
 
-```python
+```
 Funkcija print s više parametara
 
 >>>print('a', 'b', 'c')
@@ -597,7 +598,7 @@ razdvojene znakovima koje definira `sep` i završavaju znakovima
 koje definira `end`, kako poslati te parametre? Koristeći se
 imenima. Pogledajmo primjer.
 
-```python
+```
 Funkcija print s više parametara i definiranim sep i end
 >>> print('a', 'b', 'c', sep=' - ', end='...'\n)
 a - b - c ...
