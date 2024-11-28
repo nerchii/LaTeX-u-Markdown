@@ -204,23 +204,15 @@ idućem poglavlju. Pregled je vidljiv u tablici
 [1](#tab:operatori-aritmetika){reference-type="ref"
 reference="tab:operatori-aritmetika"}.
 
-::: center
-::: {#tab:operatori-aritmetika}
-**operator** **operacija** **primjer** **rezultat**
-
----
-
-$\boldsymbol{+}$ zbrajanje $7\:+\:2$ 9
-$\boldsymbol{-}$ oduzimanje $7\:-\:2$ 5
-$\boldsymbol{*}$ množenje $7\:*\:2$ 14
-$\boldsymbol{**}$ potenciranje $7\:**\:2$ 49
-$\boldsymbol{/}$ dijeljenje $7\:/\:2$ 3.5
-$\boldsymbol{//}$ cjelobrojno dijeljenje $7\://\:2$ 2
-$\boldsymbol{\%}$ ostatak cjelobrojnog dijeljenja $7\:\%\:2$ 1
-
-: Aritmetički operatori
-:::
-:::
+| Operator | Operacija                       | Primjer  | Rezultat |
+| -------- | ------------------------------- | -------- | -------- |
+| `+`      | Zbrajanje                       | `7 + 2`  | `9`      |
+| `−`      | Oduzimanje                      | `7 - 2`  | `5`      |
+| `*`      | Množenje                        | `7 * 2`  | `14`     |
+| `**`     | Potenciranje                    | `7 ** 2` | `49`     |
+| `/`      | Dijeljenje                      | `7 / 2`  | `3.5`    |
+| `//`     | Cjelobrojno dijeljenje          | `7 // 2` | `2`      |
+| `%`      | Ostatak cjelobrojnog dijeljenja | `7 % 2`  | `1`      |
 
 Zanimljivost kod aritmetičkih operatora je da se svi mogu spojiti s
 operatorom za pridruživanje vrijednosti varijabli (tj. `=`)
@@ -252,22 +244,14 @@ usporedbu možemo vidjeti na tablici
 [2](#tab:operatori-usporedba){reference-type="ref"
 reference="tab:operatori-usporedba"}.
 
-::: center
-::: {#tab:operatori-usporedba}
-**operator** **operacija** **primjer** **rezultat**
-
----
-
-$\boldsymbol{==}$ jednako $7\:==\:2$ False
-$\boldsymbol{!\!=}$ nejednako $7\:!\!=\:2$ True
-$\boldsymbol{<}$ manje $7\:<\:2$ True
-$\boldsymbol{<\!=}$ manje ili jednako $7\:<\!=\:2$ True
-$\boldsymbol{>}$ veće $7\:>\:2$ False
-$\boldsymbol{>\!=}$ veće ili jednako $7\:>\!=\:2$ False
-
-: Operatori za usporedbu
-:::
-:::
+| Operator | Operacija         | Primjer  | Rezultat |
+| -------- | ----------------- | -------- | -------- |
+| `==`     | Jednako           | `7 == 2` | `False`  |
+| `!=`     | Nejednako         | `7 != 2` | `True`   |
+| `<`      | Manje             | `7 < 2`  | `False`  |
+| `<=`     | Manje ili jednako | `7 <= 2` | `False`  |
+| `>`      | Veće              | `7 > 2`  | `True`   |
+| `>=`     | Veće ili jednako  | `7 >= 2` | `True`   |
 
 ### Logički operatori
 
@@ -280,19 +264,11 @@ reference="tab:operatori-bool"}. Ovi operatori zajedno s operatorima za
 usporedbu imaju posebno značajnu ulogu kod kondicionala, odnosno _if
 \... then \... else_ konstrukcija.
 
-::: center
-::: {#tab:operatori-bool}
-**operator** **operacija** **primjer** **rezultat**
-
----
-
-**and** logičko i $7 > 2$ and $7 < 10$ True
-**or** logičko ili $7 < 2$ or $7 < 10$ True
-**not** logička inverzija not $7\:>\:2$ False
-
-: Logički operatori
-:::
-:::
+| Operator | Operacija         | Primjer            | Rezultat |
+| -------- | ----------------- | ------------------ | -------- |
+| `and`    | Logičko "i"       | `7 > 2 and 7 < 10` | `True`   |
+| `or`     | Logičko "ili"     | `7 < 2 or 7 < 10`  | `True`   |
+| `not`    | Logička inverzija | `not (7 > 2)`      | `False`  |
 
 ### Operatori za provjeru članstva
 
@@ -304,18 +280,10 @@ tekstom. Operatori za provjeru članstva su prikazani na tablici
 [4](#tab:operatori-clanstvo){reference-type="ref"
 reference="tab:operatori-clanstvo"}.
 
-::: center
-::: {#tab:operatori-clanstvo}
-**operator** **operacija** **primjer** **rezultat**
-
----
-
-**in** sadrži \"a\" in \"abc\" True
-**not in** ne sadrži \"a\" not in \"abc\" False
-
-: Operatori za provjeru članstva
-:::
-:::
+| Operator | Operacija | Primjer            | Rezultat |
+| -------- | --------- | ------------------ | -------- |
+| `in`     | Sadrži    | `"a" in "abc"`     | `True`   |
+| `not in` | Ne sadrži | `"a" not in "abc"` | `False`  |
 
 ### Operatori za provjeru identiteta
 
@@ -328,18 +296,10 @@ provjerava da li se dvije vrijednosti mogu smatrati ekvivalentnima
 odnosno "istima", a provjera identiteta provjerava da li se radi o istoj
 vrijednosti u memoriji računala.
 
-::: center
-::: {#tab:operatori-identitet}
-**operator** **operacija** **primjer** **rezultat**
-
----
-
-**is** je isti objekt True is 1 False
-**is not** ne nije isti objekt True is not 1 True
-
-: Operatori za provjeru identiteta
-:::
-:::
+| Operator | Operacija        | Primjer         | Rezultat |
+| -------- | ---------------- | --------------- | -------- |
+| `is`     | Je isti objekt   | `True is 1`     | `False`  |
+| `is not` | Nije isti objekt | `True is not 1` | `True`   |
 
 Ovo će početi imati više smisla kada dođemo do objektnog programiranja,
 ali za sada možemo upotrebu prikazati sljedećim primjerom:
@@ -515,11 +475,11 @@ opcionalan, na koliko decimala 3.14
 Funkcija `round`, dakle, uzima jedan obvezan i jedan opcionalan
 parametar. U primjeru
 [\[listing:parametri_obveznost\]](#listing:parametri_obveznost){reference-type="ref"
-reference="listing:parametri_obveznost"} smo parametre definirali
+reference="listing:parametri*obveznost"} smo parametre definirali
 pozicijski. Prvi parametar je broj koji se zaokružuje, a drugi broj
 decimala na koji će se zakruživati. Različite funkcije imaju posve
 različite parametre i njihov broj ovisi o tome što funkcija radi. Kako
-saznati parametre neke funkcije? Možemo čitati _online_ dokumentaciju
+saznati parametre neke funkcije? Možemo čitati \_online* dokumentaciju
 ili pak iskoristiti ugrađenu funkciju `help`.
 
 ### Interna dokumentacija i funkcija help
