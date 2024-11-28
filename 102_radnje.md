@@ -49,17 +49,23 @@ da se izrazi _evaluiraju_ čime se izračunava vrijednost izraza. Izrazi
 se u načelu sastoje od operatora i operanada, ali sadrže i druge
 koncepte kao sastavne dijelove što je to funkcija. Pogledajmo primjere:
 
-::: python
-Izjave i izrazilisting:statements_expression \>\>\> 17 + 25 42 \>\>\> n
-= 17 + 25 \>\>\> if n print('broj je paran') else: print('broj je
-neparan')
+```python
+Izjave i izrazi
+>>>17 + 25
+42
+>>>  n = 17 + 25
+>>> if n % 2 == 0: #da li je ostatak cijelobrojnog dijeljenja jednak nuli
+  print('broj je paran')
+else:
+  print('broj je neparan')
 
-broj je paran \>\>\> x = round(3.14)
-:::
-
+broj je paran
+>>> x = round(3.14)
+```
 U retku 1 vidimo jedan izraz, `17 + 25`. Ovaj izraz se sastoji
 od operatora `+` te dva cijela broja kao operanada,
 `17` i `25`. Ovaj izraz također tvori i jednu izjavu
+
 koju u engleskom programskom žargonu nazivamo _expression statement_.
 Redak 2 je rezultat evaluacije ovog izraza.
 
@@ -85,6 +91,7 @@ upoznavati kasnije u tekstu kada nam teme i znanje dozvole da ih
 kvalitetno obradimo.
 
 U retku 4 započinje složena izjava `if` koja završava u retku 7. Rezultat izvršavanja ove izjave možemo vidjeti u retku 10. Ovu izjavu
+
 možemo pročitati na sljedeći način: ako je n paran broj, tada na ekran
 ispiši tekst \"broj je paran\", a ako nije, tada ne ekran ispiši tekst
 \"broj je neparan\". U retku 4, prvo se evaluira izraz
@@ -165,7 +172,9 @@ referencu.
 ### Pridruživanje vrijednosti varijabli
 
 Daleko najčešći operator koji ćemo koristiti u kôdu je _operator za
+
 pridruživanje vrijednosti varijabli_. To je operator `=`. Važno
+
 je zapamtiti da ovaj operator ne provjerava jednakost (tome služi
 operator `==`), već dodjeljuje vrijednosti nekoj varijabli. U
 Pythonu stoji i ideja da ovime dodjeljujemo imena različitim
@@ -173,20 +182,22 @@ vrijednostima kako bi se na njih kasnije mogli referirati. To će često
 biti vrijednosti koje ne znamo za vrijeme pisanja programa kao što je to
 slučaj kada korisnika zatražimo unos funkcijom `input`.
 
-::: python
-Pridruživanje vrijednosti varijablilisting:pridruzivanje_vrijednosti
-\>\>\> x = 16 \# pridruži vrijednost 16 novoj varijabli x \>\>\> y = 26
-\# pridruži vrijednost 26 novoj varijabli y \>\>\> x + y \# rezultat
-ovog izračuna nismo pridružili niti jednoj varijabli 42 \>\>\> z = x + y
-\# definiraj novu varijablu z kako bi se kasnije mogao pozvati na
-rezultat \>\>\> print(z) \# pozovi se na vrijednost varijable z 42
-\>\>\> z = y - x \# pridruži novu vrijednost varijabli z \>\>\> print(z)
-\# pozovi se na vrijednost varijable z 10
+```python
+Pridruživanje vrijednosti varijabli
 
-\>\>\> text = input(\"Upiši neki tekst: \") \# pridruži korisnički unos
-varijabli \"text\" Upiši neki tekst: neću \>\>\> print(text) \#
-varijabla text se sada referira na što god da je korisnik upisao 'neću'
-:::
+>>> x = 16 # pridruži vrijednost 16 novoj varijabli x
+>>> y = 26 # pridruži vrijednost 26 novoj varijabli y
+>>> x + y # rezultat ovog izračuna nismo pridružili niti jednoj varijabli
+42
+>>> z = x + y # definiraj novu varijablu z kako bi se kasnije mogao pozvati na rezultat
+>>> print(z) # pozovi se na vrijednost varijable z
+42
+>>> z = y - x # pridruži novu vrijednost varijabli z
+>>> print(z) # pozovi se na vrijednost varijable z 10
+
+>>> text = input("Upiši neki tekst: ") # pridruži korisnički unos varijabli "text"
+Upiši neki tekst: neću >>> print(text) #varijabla text se sada referira na što god da je korisnik upisao 'neću'
+```
 
 Važno je primijetiti da su nam varijable nužne kako bi programirali.
 Egzaktne vrijednosti vrlo često nisu poznate za vrijeme pisanja
@@ -223,15 +234,18 @@ objasniti primjerom
 [\[listing:dodjeljivanje_aritmetika\]](#listing:dodjeljivanje_aritmetika){reference-type="ref"
 reference="listing:dodjeljivanje_aritmetika"}.
 
-::: python
+``` python
 Skraćeno izvršavanje aritmetičkih operacija i pridruživanja
-varijablilisting:dodjeljivanje_aritmetika \>\>\> x = 1 \>\>\> x = x + 2
-\# zbroji x i 2 pa pridruži novu vrijednost varijabli x \>\>\> print(x)
-\# x sada ima novu vrijednost, nije više 1 3 \>\>\> x += 2 \# isto što i
-x = x + 2 samo kraće za pisati \>\>\> print(x) 5 \>\>\> x \*= 2 \# isto
-što i x = x \* 2 samo kraće za pisati \>\>\> print(x) 10 \>\>\> x /= 2
-\# isto što i x = x / 2 \>\>\> print(x) 5.0
-:::
+
+>>> x = 1
+>>> x = x + 2 # zbroji x i 2 pa pridruži novu vrijednost varijabli x
+>>> print(x) # x sada ima novu vrijednost, nije više 1
+3
+>>> x += 2 # isto što i x = x + 2 samo kraće za pisati
+>>> print(x) 5 >>> x *= 2 # isto što i x = x \* 2 samo kraće za pisati
+>>> print(x) 10 >>> x /= 2 # isto što i x = x / 2 >>> print(x)
+5.0
+````
 
 ### Operatori za usporedbu
 
@@ -261,6 +275,7 @@ uvjeta zadovoljen. Tome služe logički operatori `and`,
 `or` i `not` prikazani na tablici
 [3](#tab:operatori-bool){reference-type="ref"
 reference="tab:operatori-bool"}. Ovi operatori zajedno s operatorima za
+
 usporedbu imaju posebno značajnu ulogu kod kondicionala, odnosno _if
 \... then \... else_ konstrukcija.
 
@@ -304,11 +319,13 @@ vrijednosti u memoriji računala.
 Ovo će početi imati više smisla kada dođemo do objektnog programiranja,
 ali za sada možemo upotrebu prikazati sljedećim primjerom:
 
-::: python
-Provjera jednakosti i operator islisting:operator_is \>\>\> True == 1 \#
-True se može smatrati jednakom vrijednosti 1 True \>\>\> True is 1 \#
-True nije posve ista vrijednost u memoriji kao i 1 False
-:::
+``` python
+Provjera jednakosti i operator is
+>>> True == 1 #True se može smatrati jednakom vrijednosti 1
+True
+>>> True is 1 #True nije posve ista vrijednost u memoriji kao i 1
+False
+````
 
 ### Prioritet izvršavanja operacija
 
@@ -318,11 +335,13 @@ operatora? Na primjer, koliko je `2 + 2 * 3`? Kako bismo
 izračunali taj izraz potreban nam je koncept prioriteta operatora.
 Pogledajmo primjer.
 
-::: python
-Provjera jednakosti i operator islisting:operator_precedence \>\>\> 2 +
-2 \* 3 \# prvo se množi a onda zbraja 8 \>\>\> (2 + 2) \* 3 \# prvo se
-evaluira operacija u zagradama, a tek onda množi 12
-:::
+```python
+Provjera jednakosti i operator is
+>>> 2 + 2 * 3 # prvo se množi a onda zbraja
+8
+>>> (2 + 2) * 3 # prvo se evaluira operacija u zagradama, a tek onda množi
+12
+```
 
 Kao što znamo iz matematike, postoji zadani redoslijed izvršavanja
 operatora. Operacije prema prioritetu operatora. U prethodnom primjeru,
@@ -464,12 +483,14 @@ pozicijski pristup i slali samo jedan parametar. Pogledajmo funkciju
 `round` koja zaokružuje broj na cijeli ili na određen broj
 decimala kao primjer funkcije s dva parametra.
 
-::: python
-Obvezni i opcionalni parametrilisting:parametri_obveznost \>\>\> pi =
-3.1416 \>\>\> round(pi) \# obavezan parametar, što se zaokružuje, bez
-toga radnja nema smisla 3 \>\>\> round(pi, 2) \# drugi parametar je
-opcionalan, na koliko decimala 3.14
-:::
+```python
+Obvezni i opcionalni parametri
+>>> pi = 3.1416
+>>> round(pi) # obavezan parametar, što se zaokružuje, bez toga radnja nema smisla
+3
+>>> round(pi, 2) # drugi parametar je opcionalan, na koliko decimala
+3.14
+```
 
 Funkcija `round`, dakle, uzima jedan obvezan i jedan opcionalan
 parametar. U primjeru
@@ -479,6 +500,7 @@ pozicijski. Prvi parametar je broj koji se zaokružuje, a drugi broj
 decimala na koji će se zakruživati. Različite funkcije imaju posve
 različite parametre i njihov broj ovisi o tome što funkcija radi. Kako
 saznati parametre neke funkcije? Možemo čitati \_online* dokumentaciju
+
 ili pak iskoristiti ugrađenu funkciju `help`.
 
 ### Interna dokumentacija i funkcija help
@@ -486,17 +508,16 @@ ili pak iskoristiti ugrađenu funkciju `help`.
 Ukoliko u Pythonu potražimo pomoć za funkciju `round` dobit
 ćemo sljedeći ispis:
 
-::: python
-Pomoć za funkciju roundlisting:help_round \>\>\> help(round) \"\"\" Help
-on built-in function round in module builtins:
+```python
+Pomoć za funkciju round
+>>> help(round)
+ """Help on built-in function round in module builtins:
 
-round(number, ndigits=None) Round a number to a given precision in
-decimal digits.
+round(number, ndigits=None)
+  Round a number to a given precision in decimal digits.
 
-The return value is an integer if ndigits is omitted or None. Otherwise
-the return value has the same type as the number. ndigits may be
-negative. \"\"\"
-:::
+  The return value is an integer if ndigits is omitted or None. Otherwise the return value has the same type as the number. ndigits may be negative. """
+```
 
 Primijetite razliku između `help(round)` i
 `help(round())`. U prvom slučaju ne izvršavamo funkciju
@@ -520,13 +541,16 @@ svaki parametar uz poziciju ima i svoje ime. Ta imena možemo koristiti
 prilikom pozivanja funkcije kako bi parametre definirali putem imena, a
 ne pozicije. Pogledajmo primjer:
 
-::: python
-Pozicijski i imenovani parametrilisting:pozicijski_i_imenovani_parametri
-\>\>\> n = 3.142 \>\>\> round(number=n) \# bilo koji parametar možemo i
-imenovati 3 \>\>\> round(number=n, ndigits=2) \# sintaksa je ista
-pridruživanju vrijednosti varijabli 3.14 \>\>\> round(ndigits=2,
-number=n) \# kada su parametri imenovani, pozicija je nebitna 3.14
-:::
+```python
+Pozicijski i imenovani parametri
+>>> n = 3.142
+>>> round(number=n) # bilo koji parametar možemo i imenovati
+3
+>>> round(number=n, ndigits=2) # sintaksa je ista pridruživanju vrijednosti varijabli
+3.14
+>>> round(ndigits=2, number=n) # kada su parametri imenovani, pozicija je nebitna
+3.14
+```
 
 Imenovani parametri su korisni kad želimo preskočiti neki opcionalan
 parametar i kad funkcije koje koristimo imaju velik broj parametara i
@@ -538,19 +562,15 @@ imenovane parametre kako bi postigli određenu funkcionalnost. Kao
 kompleksniji primjer možemo prikazati naredbu `print` koju smo
 do sada koristili samo u najosnovnijem obliku.
 
-::: python
-Pomoć za funkciju printlisting:help_print \>\>\> help(print) Help on
-built-in function print in module builtins:
+```python
+Pomoć za funkciju print
+>>> help(print)
+Help on built-in function print in module builtins:
 
-print(\...) print(value, \..., sep=' ', end='', file=sys.stdout,
-flush=False)
+print(...) print(value, ..., sep=' ', end='' file=sys.stdout, flush=False)
 
-Prints the values to a stream, or to sys.stdout by default. Optional
-keyword arguments: file: a file-like object (stream); defaults to the
-current sys.stdout. sep: string inserted between values, default a
-space. end: string appended after the last value, default a newline.
-flush: whether to forcibly flush the stream.
-:::
+  Prints the values to a stream, or to sys.stdout by default. Optional keyword arguments: file: a file-like object (stream); defaults to the current sys.stdout. sep: string inserted between values, default a space. end: string appended after the last value, default a newline. flush: whether to forcibly flush the stream.
+```
 
 Usredotočimo se za sada samo na parametre funkcije `print`.
 Vidimo novi koncept. Prvi parametar se zove `value`, a nakon
@@ -559,10 +579,12 @@ vrijednosti kao parametre za `value`. Sve ove vrijednosti će se
 ispisati na ekran razdvojene razmakom, osim ako nismo naredili
 drugačije. Pogledajmo primjer:
 
-::: python
-Funkcija print s više parametaralisting:print_vise_parametara \>\>\>
-print('a', 'b', 'c') a b c
-:::
+```python
+Funkcija print s više parametara
+
+>>>print('a', 'b', 'c')
+a b c
+```
 
 Funkcija `print` je u liniji 1 primila tri vrijednosti koje će
 ispisati, `'a', 'b'` i `'c'`. Sve tri vrijednosti su
@@ -575,11 +597,15 @@ razdvojene znakovima koje definira `sep` i završavaju znakovima
 koje definira `end`, kako poslati te parametre? Koristeći se
 imenima. Pogledajmo primjer.
 
-::: python
-Funkcija print s više parametara i definiranim sep i
-endlisting:print_sep_end \>\>\> print('a', 'b', 'c', sep=' - ', end='
-\...') a - b - c \... \>\>\> print('a', 'b', 'c', sep='') a b c
-:::
+```python
+Funkcija print s više parametara i definiranim sep i end
+>>> print('a', 'b', 'c', sep=' - ', end='...'\n)
+a - b - c ...
+>>> print('a', 'b', 'c', sep='')
+a
+b
+c
+```
 
 U prikazanom primjeru, `'\n'` se referira na znak za novi
 redak, što je pobliže opisano u poglavlju o tekstu. Redak 1 prikazuje
